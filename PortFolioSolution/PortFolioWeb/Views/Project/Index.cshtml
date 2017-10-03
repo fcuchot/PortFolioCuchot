@@ -2,18 +2,94 @@
 @{
     ViewBag.Title = "Index";
 }
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<h2>Index</h2>
+<nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+    <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+    </label>
 
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="~/Content/img/disneylandThumbmail.jpg" alt="Kid'In'Park">
-            <div class="caption">
-                <h3>Kid'IN'Park</h3>
-                
-                <p><a href="@Url.Action("KidInParkIdx", "Project")" class="btn btn-primary" role="button">En savoir plus</a>
+    <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+    <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+    <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+    <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+
+
+</nav>
+<h2>Projets</h2>
+<h3>Formation Humaine</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/img/disneylandThumbmail.jpg" alt="Kid'In'Park" class="img-rounded">
+                <div class="caption">
+                    <h3>Kid'IN'Park</h3>
+
+                    <p><a href="@Url.Action("KidInParkIdx", "Project")" class="btn btn-primary" role="button">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+                <img src="~/Content/img/INFORMINGLOGO.jpg" alt="In'Forming" class="img-rounded">
+                <div class="caption">
+                    <h3>In'Forming</h3>
+
+                    <p><a href="@Url.Action("KidInParkIdx", "Project")" class="btn btn-primary" role="button">En savoir plus</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 
+<h3>Informatique</h3>
+
+<div class="container">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card card-inverse card-info">
+                <img class="card-img-top" src="~/Content/img/disneylandThumbmail.jpg">
+                <div class="card-block">
+                    <figure class="profile profile-inline">
+                        <img src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif" class="profile-avatar" alt="">
+                    </figure>
+                    <h4 class="card-title">Kid'IN'Park</h4>
+                    <div class="card-text">
+                        Une journée à Disneyland en compagnie de 30 enfants de l'association Excelsior.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="@Url.Action("KidInParkIdx", "Project")" class="btn btn-primary" role="button">En savoir plus</a>
+                        <button class="btn btn-info btn-sm">En savoir plus</button>
+            </div>
             </div>
         </div>
     </div>
-</div>
+
+
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="shadowed-goo">
+
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+            <feComposite in2="shadow" in="goo" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+    </defs>
+</svg>

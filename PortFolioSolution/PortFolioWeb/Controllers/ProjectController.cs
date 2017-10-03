@@ -17,5 +17,9 @@ namespace PortFolioWeb.Controllers
         {
             return View("~/Views/Project/PFH/Kidinpark.cshtml");
         }
+        public ActionResult Informing()
+        {
+            return View("~/Views/Project/PFH/Informing.cshtml");
+        }
     }
 }
